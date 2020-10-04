@@ -24,7 +24,7 @@ And that's it. To run mpjg-streamer type the following command:
 `export LD_LIBRARY_PATH=.`  
 `./mjpg_streamer -i './input_uvc.so -d /dev/video0 -r 640x480 -f 15' -o './output_http.so -w ./www -p 8080'`  
 
-switches:
+switches:  
 `-i:` configure the input section  
 `-d:` device selection, in case of multiple webcams  
 `-r:` frame resolution width*height  
