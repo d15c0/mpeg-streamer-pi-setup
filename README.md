@@ -1,14 +1,21 @@
 mjpeg-streamer:  
 Another streaming software that I tried was mjpeg-streamer, which is not as features complete as motion, but it is perfect if you just need a video stream. It also provides a web interface to display the stream. I couldn't find a binary version of mjpeg-streamer for arm processor, so I had to compile it myself as follows.  
 
-First off we need mjpg-streamer source code from > here < and save it in your folder of choice. I usually save and extract the source packages under /usr/local/src.
-Position yourself whichever folder the archive has been saved into, and extract the archive with the command:  
-
-`tar xvzf mjpg-streamer-r63.tar.gz` 
+Compile mjpep-streamer from source...
 
 In order to compile mjpg-streamer, we need the libjpeg8-dev libraries, so let's install them first:
 
-`apt-get install libjpeg8-dev`   
+`apt-get install gcc g++ cmake libjpeg8-dev`   
+
+Now compile..
+
+`https://github.com/jacksonliam/mjpg-streamer.git`
+
+`cd mjpg-streamer/mjpg-streamer-experimental/`
+
+`make`
+
+`make install`
 
 I also needed to create a symbolic link of one header file which, to me, resulted missing:  
 
